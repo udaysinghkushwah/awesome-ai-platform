@@ -144,3 +144,12 @@ We welcome contributions of all levels! Please read our [Contributing Guidelines
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## ☕ Support
+
+If you find this project helpful, support my work by buying me a chai!
+
+[![Buy Me A Chai](https://img.shields.io/badge/Buy%20Me%20a%20Chai-orange?style=for-the-badge&logo=coffee&logoColor=white)](https://www.buymeachai.in/toudaysinghkushwah)
+
