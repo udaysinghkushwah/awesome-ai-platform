@@ -6,6 +6,7 @@
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 [![Aesthetics](https://img.shields.io/badge/Design-Premium%20Glassmorphic-purple)]()
 [![Hosted Dashboard](https://img.shields.io/badge/Hosted-GitHub%20Pages-blue)](https://udaysinghkushwah.github.io/awesome-ai-platform/)
+[![Buy Me A Chai](https://img.shields.io/badge/Buy%20Me%20a%20Chai-orange?style=flat-square&logo=coffee&logoColor=white)](https://www.buymeachai.in/toudaysinghkushwah)
 
 **Hosted Interactive Dashboard:** [https://udaysinghkushwah.github.io/awesome-ai-platform/](https://udaysinghkushwah.github.io/awesome-ai-platform/)
 
