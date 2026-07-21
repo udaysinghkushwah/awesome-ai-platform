@@ -10,6 +10,8 @@ import { AiModule } from './ai/ai.module';
 import { SearchModule } from './search/search.module';
 import { ReviewModule } from './review/review.module';
 import { AgentModule } from './agent/agent.module';
+import { PluginModule } from './plugin/plugin.module';
+import { TemplateModule } from './template/template.module';
 
 @Module({
   imports: [
@@ -22,6 +24,8 @@ import { AgentModule } from './agent/agent.module';
     SearchModule,
     ReviewModule,
     AgentModule,
+    PluginModule,
+    TemplateModule,
   ],
   controllers: [AppController],
   providers: [AppService],
