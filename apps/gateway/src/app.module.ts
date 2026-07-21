@@ -9,6 +9,7 @@ import { ProjectModule } from './project/project.module';
 import { AiModule } from './ai/ai.module';
 import { SearchModule } from './search/search.module';
 import { ReviewModule } from './review/review.module';
+import { AgentModule } from './agent/agent.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { ReviewModule } from './review/review.module';
     AiModule,
     SearchModule,
     ReviewModule,
+    AgentModule,
   ],
   controllers: [AppController],
   providers: [AppService],

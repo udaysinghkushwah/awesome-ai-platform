@@ -41,7 +41,7 @@ export class AiService implements OnModuleInit {
       try {
         const model = this.ai.getGenerativeModel({ model: 'gemini-2.5-flash' });
         const response = await model.generateContent(prompt);
-        return response.text();
+        return response.response.text();
       } catch (err) {
         console.error('Error generating Gemini content:', err);
       }
