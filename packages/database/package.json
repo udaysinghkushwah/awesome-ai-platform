@@ -10,6 +10,7 @@
     "db:push": "prisma db push"
   },
   "dependencies": {
+    "@elastic/elasticsearch": "^9.4.2",
     "@prisma/client": "^5.10.2"
   },
   "devDependencies": {

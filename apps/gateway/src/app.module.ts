@@ -6,6 +6,8 @@ import { PrismaModule } from './prisma/prisma.module';
 import { AuthModule } from './auth/auth.module';
 import { OrgModule } from './org/org.module';
 import { ProjectModule } from './project/project.module';
+import { AiModule } from './ai/ai.module';
+import { SearchModule } from './search/search.module';
 
 @Module({
   imports: [
@@ -14,6 +16,8 @@ import { ProjectModule } from './project/project.module';
     AuthModule,
     OrgModule,
     ProjectModule,
+    AiModule,
+    SearchModule,
   ],
   controllers: [AppController],
   providers: [AppService],

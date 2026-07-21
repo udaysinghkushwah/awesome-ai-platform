@@ -13,10 +13,10 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@awesome-ai/sdk": ["packages/sdk/src"],
-      "@awesome-ai/shared": ["packages/shared/src"],
-      "@awesome-ai/logger": ["packages/logger/src"],
-      "@awesome-ai/database": ["packages/database/src"]
+      "@awesome-ai/sdk": ["packages/sdk/dist"],
+      "@awesome-ai/shared": ["packages/shared/dist"],
+      "@awesome-ai/logger": ["packages/logger/dist"],
+      "@awesome-ai/database": ["packages/database/dist"]
     }
   },
   "exclude": ["node_modules", "dist", "out", ".next", "build"]
