@@ -82,13 +82,12 @@ graph TD
 
 *   **Node.js**: `v20.x` or later
 *   **pnpm**: `v9.x` or later
-*   **Docker & Docker Compose**
 
 ### Setup Environment
 
 1.  Clone this repository and go to the project directory:
     ```bash
-    git clone https://github.com/your-username/awesome-ai-platform.git
+    git clone https://github.com/udaysinghkushwah/awesome-ai-platform.git
     cd awesome-ai-platform
     ```
 
@@ -102,12 +101,51 @@ graph TD
     cp .env.example .env
     ```
 
-4.  Start local infrastructure (Postgres, Redis, Elasticsearch, Kafka):
+---
+
+### 📦 Option A: Zero-Dependency Local Mode (Instant Sandbox)
+
+This mode runs the entire monorepo stack using a local SQLite database file and in-memory cosine similarity vector search. **No Docker, Postgres, or Elasticsearch required.**
+
+1.  **Sync the database schema**:
+    ```bash
+    pnpm --filter @awesome-ai/database db:generate
+    pnpm --filter @awesome-ai/database db:push
+    ```
+
+2.  **Start API Gateway (Port 4000)**:
+    ```bash
+    PORT=4000 DATABASE_URL="file:$(pwd)/packages/database/prisma/dev.db" pnpm --filter gateway start
+    ```
+
+3.  **Start Web Dashboard (Port 3000/3001)**:
+    ```bash
+    pnpm --filter frontend dev
+    ```
+
+4.  **Run Unified E2E Test Suite**:
+    ```bash
+    node run-tests.js
+    ```
+
+---
+
+### 🐳 Option B: Full Infrastructure Mode (Docker Compose)
+
+This mode utilizes PostgreSQL for metadata and Elasticsearch for high-performance dense vector search.
+
+1.  **Start local databases**:
     ```bash
     docker-compose up -d
     ```
 
-5.  Run the developer environment:
+2.  **Push Prisma Schemas to Postgres**:
+    ```bash
+    pnpm --filter @awesome-ai/database db:generate
+    pnpm --filter @awesome-ai/database db:push
+    ```
+
+3.  **Run the developer servers**:
     ```bash
     pnpm dev
     ```
