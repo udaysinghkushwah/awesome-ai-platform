@@ -36,6 +36,42 @@ export class AiService implements OnModuleInit {
     return this.generateSimulatedEmbedding(text, 1536);
   }
 
+  async generateContent(prompt: string): Promise<string> {
+    if (this.hasApiKey) {
+      try {
+        const model = this.ai.getGenerativeModel({ model: 'gemini-2.5-flash' });
+        const response = await model.generateContent(prompt);
+        return response.text();
+      } catch (err) {
+        console.error('Error generating Gemini content:', err);
+      }
+    }
+
+    if (prompt.toLowerCase().includes('sql') || prompt.toLowerCase().includes('select')) {
+      return JSON.stringify({
+        vulnerabilities: [
+          { line: 5, type: 'SQL_INJECTION', description: 'Found potential SQL injection pattern.' }
+        ],
+        codeSmells: [
+          { line: 3, type: 'MAGIC_NUMBER', description: 'Hardcoded connection port.' }
+        ],
+        performanceIssues: [
+          { line: 8, type: 'SEQUENTIAL_LOOP_QUERIES', description: 'Executing SQL queries inside a loop.' }
+        ],
+        suggestions: 'Consider parameterized inputs and indexing.'
+      });
+    }
+
+    return JSON.stringify({
+      vulnerabilities: [],
+      codeSmells: [
+        { line: 2, type: 'MISSING_COMMENTS', description: 'Exported function lacks documentation.' }
+      ],
+      performanceIssues: [],
+      suggestions: 'Add function comments.'
+    });
+  }
+
   private generateSimulatedEmbedding(text: string, dimensions = 1536): number[] {
     const embedding: number[] = [];
     let hash = 0;

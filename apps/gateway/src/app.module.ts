@@ -8,6 +8,7 @@ import { OrgModule } from './org/org.module';
 import { ProjectModule } from './project/project.module';
 import { AiModule } from './ai/ai.module';
 import { SearchModule } from './search/search.module';
+import { ReviewModule } from './review/review.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { SearchModule } from './search/search.module';
     ProjectModule,
     AiModule,
     SearchModule,
+    ReviewModule,
   ],
   controllers: [AppController],
   providers: [AppService],
