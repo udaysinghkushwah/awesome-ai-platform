@@ -5,6 +5,9 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg)](CONTRIBUTING.md)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 [![Aesthetics](https://img.shields.io/badge/Design-Premium%20Glassmorphic-purple)]()
+[![Hosted Dashboard](https://img.shields.io/badge/Hosted-GitHub%20Pages-blue)](https://udaysinghkushwah.github.io/awesome-ai-platform/)
+
+**Hosted Interactive Dashboard:** [https://udaysinghkushwah.github.io/awesome-ai-platform/](https://udaysinghkushwah.github.io/awesome-ai-platform/)
 
 > A Next-Generation Open Source AI Workspace and Agent Platform designed for developers. Think **GitHub + Cursor + Notion + Jira + Claude + Local AI** unified under one dashboard. Everything in your workspace becomes semantic, indexed, and queryable.
 
