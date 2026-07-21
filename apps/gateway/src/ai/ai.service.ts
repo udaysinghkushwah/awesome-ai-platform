@@ -47,6 +47,15 @@ export class AiService implements OnModuleInit {
       }
     }
 
+    if (prompt.toLowerCase().includes('tablescans') || prompt.toLowerCase().includes('missingindexes')) {
+      return JSON.stringify({
+        tableScans: ["Sequential scan detected on table 'users' because 'status' column is queried without index."],
+        missingIndexes: ["CREATE INDEX idx_users_status ON users(status);"],
+        rewrittenQuery: "SELECT id, email FROM users WHERE status = 'ACTIVE' LIMIT 10;",
+        explanation: "Adding an index on 'status' avoids a sequential scan of the full users table."
+      });
+    }
+
     if (prompt.toLowerCase().includes('sql') || prompt.toLowerCase().includes('select')) {
       return JSON.stringify({
         vulnerabilities: [

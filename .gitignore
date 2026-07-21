@@ -124,3 +124,6 @@ Thumbs.db
 *.tfstate
 *.tfstate.backup
 kubeconfig
+# SQLite Databases
+*.db
+*.db-journal
